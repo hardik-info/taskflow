@@ -1,4 +1,5 @@
 const express = require('express');
+const helmet = require('helmet');
 const app = express();
 const port = 3000;
 
@@ -10,8 +11,10 @@ console.log('Server is starting...');
 
 // Missing error handling for route
 app.get('/', (req, res) => {
-    let user = undefined;
-    console.log(user.name); // This will throw an error if user is undefined
+    let user;
+    if (user != null) {
+        console.log(user.name);
+    }
     res.send('Welcome to TaskFlow!');
 });
 
@@ -19,6 +22,8 @@ app.get('/', (req, res) => {
 app.get('/tasks', (req, res) => {
     res.json({ message: 'List of tasks' });
 });
+
+app.disable('x-powered-by');
 
 app.listen(port, () => {
     console.log(`TaskFlow server is running on http://localhost:${port}`);
