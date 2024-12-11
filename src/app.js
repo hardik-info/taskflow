@@ -11,7 +11,9 @@ console.log('Server is starting...');
 // Missing error handling for route
 app.get('/', (req, res) => {
     let user;
-    console.log(user?.name); // This will throw an error if user is undefined
+    if (user != null) {
+        console.log(user.name);
+    }
     res.send('Welcome to TaskFlow!');
 });
 
