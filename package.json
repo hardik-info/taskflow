@@ -1,18 +1,77 @@
-{
-  "name": "taskflow",
-  "version": "1.0.0",
-  "description": "TaskFlow is a simple task management application built to demonstrate SonarCloud's code quality analysis. The project includes several intentional issues that are detected by SonarCloud's static analysis, including unused variables, improper logging, and missing error handling.",
-  "main": ".eslintrc.js",
-  "directories": {
-    "test": "test"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.21.2"
-  }
-}
+```markdown
+# TaskFlow - Task Management Application
+
+TaskFlow is a simple task management application built to demonstrate SonarCloud's code quality analysis. The project includes several intentional issues that are detected by SonarCloud's static analysis, including unused variables, improper logging, and missing error handling.
+
+## Features
+
+- Task creation and management
+- User authentication (simple)
+- Task prioritization and tracking
+
+## Project Structure
+
+- `src/`: Contains the main application code, including intentional issues like unused variables and missing error handling.
+- `test/`: Includes test files with issues related to asynchronous handling, missing assertions, and improper mocking.
+- `.eslintrc.js`: ESLint configuration file for static analysis.
+- `sonar-project.properties`: SonarCloud configuration file for code analysis.
+
+## Setup
+
+Before you start, you should have Node.js, npm, and SonarScanner installed on your machine.
+
+### Setup on Windows
+
+1. Install Node.js and npm
+    - Download Node.js installer from the [official website](https://nodejs.org/en/download/).
+    - Install Node.js and npm from the installer.
+
+2. Install SonarScanner
+    - Download SonarScanner from the [official website](https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/).
+    - Install SonarScanner from the installer.
+
+### Setup on Mac
+
+1. Install Node.js and npm
+    - Download Node.js installer from the [official website](https://nodejs.org/en/download/).
+    - Install Node.js and npm from the installer.
+
+2. Install SonarScanner
+    - Download SonarScanner from the [official website](https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/).
+    - Install SonarScanner from the installer.
+
+### Post Installation
+
+1. Clone the repository to your local machine:
+   ```bash
+   git clone <repo_url>
+   ```
+2. Install dependencies:
+   ```bash
+   cd <project_directory>
+   npm install
+   ```
+3. Start the application:
+   ```bash
+   npm start
+   ```
+
+## Running Tests
+
+1. Run tests:
+   ```bash
+   npm test
+   ```
+
+2. Run SonarCloud analysis locally:
+   ```bash
+   sonar-scanner
+   ```
+
+## SonarCloud Integration
+
+- This project is integrated with SonarCloud to continuously analyze code quality.
+- Check the SonarCloud dashboard for detailed reports and suggestions for improvement.
+ 
+Note: Ensure a valid projectKey, OrganizationKey, and host URL in sonar-project.properties file as per your SonarCloud standards.
+```
