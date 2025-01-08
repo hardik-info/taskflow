@@ -1,57 +1,92 @@
+```markdown
 # TaskFlow - Task Management Application
 
-TaskFlow is a simple task management application built to demonstrate SonarCloud's code quality analysis. The project includes several intentional issues that are detected by SonarCloud's static analysis, including unused variables, improper logging, and missing error handling.
+TaskFlow is a simple task management application built using Node.js. The application emphasizes on clean, and easy to understand code, with a focus on code quality analysis via SonarCloud.
 
 ## Features
 
 - Task creation and management
-- User authentication (simple)
+- User authentication
 - Task prioritization and tracking
 
 ## Project Structure
 
-- `src/`: Contains the main application code, including intentional issues like unused variables and missing error handling.
-- `test/`: Includes test files with issues related to asynchronous handling, missing assertions, and improper mocking.
-- `.eslintrc.js`: ESLint configuration file for static analysis.
-- `sonar-project.properties`: SonarCloud configuration file for code analysis.
+- `src/`: Contains the main application code.
+- `test/`: Includes test files.
+- `.eslintrc.js`: ESLint configuration file for linting.
+- `sonar-project.properties`: Configuration file for SonarCloud code analysis.
 
-## Setup
+## Requirements
 
-1. Clone the repository to your local machine:
-   ```bash
-   git clone <repo_url>
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Start the application:
-   ```bash
-   npm start
-   ```
+- Node.js
+- npm (Node Package Manager)
+- SonarQube Scanner
+- Database tool (depending on the chosen database)
 
-## Running Tests
+## Setup - Windows/Mac
 
-1. Run tests:
+### Downloading and Installing Required Software
+
+1. Install Node.js and npm:
+
+- **On Windows**- Download it from the official [website](https://nodejs.org/en/)
+  
+- **On Mac**- Use Homebrew:
    ```bash
-   npm test
+   brew install node
    ```
 
-2. Run SonarCloud analysis locally:
-   ```bash
-   sonar-scanner
-   ```
+2. Install SonarQube Scanner:
 
-## SonarCloud Integration
+- Follow instructions on the official [SonarQube documentation](https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/)
 
-- This project is integrated with SonarCloud to continuously analyze code quality.
-- Check the SonarCloud dashboard for detailed reports and suggestions for improvement.
-```
+3. Install a database tool of your choice (MySQL, PostgreSQL, MongoDB, etc.).
 
 ---
 
-### Summary
+### Installing project dependencies:
 
-This Node.js project **TaskFlow** includes intentional code quality issues across various files that SonarCloud will detect. These issues will help you test the effectiveness of your AI tool for code analysis and resolution.
+Navigate to the project directory in terminal/command prompt and run:
 
+```bash
+npm install
+```
 
+### Running the project locally:
+
+In the project directory, run:
+
+```bash
+npm start
+```
+
+### Setting up environments
+
+Environment variables should be configured as per the requirement of the project. The variables include database connection string, secret keys, SonarQube variables, etc.
+
+- Create a .env file in the root directory of your project and add the necessary variables as per the project requirements.
+
+---
+
+## Running Tests
+
+Run tests:
+
+```bash
+npm test
+```
+
+Run SonarCloud analysis locally:
+
+```bash
+sonar-scanner
+```
+
+## Deployment
+
+This application can be deployed on any cloud server provider such as AWS, Google Cloud, or Azure according to preference. Refer to the CI/CD pipeline code for specific steps related to your choice of service.
+
+## SonarCloud Integration
+
+This project is integrated with SonarCloud for continuous code quality checks. Check the SonarCloud dashboard for detailed reports and suggestions for improvement.
+```
