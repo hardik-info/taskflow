@@ -1,6 +1,6 @@
 # TaskFlow - Task Management Application
 
-TaskFlow is a simple task management application built to demonstrate SonarCloud's code quality analysis. The project includes several intentional issues that are detected by SonarCloud's static analysis, including unused variables, improper logging, and missing error handling.
+TaskFlow is a Node.js based task management application designed to showcase SonarCloud's code quality analysis. It contains several intentional issues detected by SonarCloud's static code analysis, such as unused variables, incorrect logging, and missing error handling.
 
 ## Features
 
@@ -15,29 +15,57 @@ TaskFlow is a simple task management application built to demonstrate SonarCloud
 - `.eslintrc.js`: ESLint configuration file for static analysis.
 - `sonar-project.properties`: SonarCloud configuration file for code analysis.
 
-## Setup
+## Prerequisites
 
-1. Clone the repository to your local machine:
+- You need to have Node.js and npm installed on your system. If not, you can download and install Node.js from [here](https://nodejs.org/) which includes npm.
+- Additionally, you need to have SonarQube installed on your system which can be downloaded from [here](https://www.sonarqube.org/downloads/).
+- A text editor preferably VS Code.
+- Working knowledge of Node.js and JavaScript.
+
+## Setup (Mac)
+
+1. In the terminal, clone the repository:
    ```bash
    git clone <repo_url>
    ```
-2. Install dependencies:
+2. Navigate into the directory:
+   ```bash
+   cd <project_directory>
+   ```
+3. Install dependencies:
    ```bash
    npm install
    ```
-3. Start the application:
+4. Start the application:
+   ```bash
+   npm start
+   ```
+## Setup (Windows)
+
+1. In Command Prompt, clone the repository:
+   ```bash
+   git clone <repo_url>
+   ```
+2. Navigate into the directory:
+   ```bash
+   cd <project_directory>
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the application:
    ```bash
    npm start
    ```
 
 ## Running Tests
 
-1. Run tests:
+1. To run tests:
    ```bash
    npm test
    ```
-
-2. Run SonarCloud analysis locally:
+2. To run SonarCloud analysis locally:
    ```bash
    sonar-scanner
    ```
@@ -45,13 +73,9 @@ TaskFlow is a simple task management application built to demonstrate SonarCloud
 ## SonarCloud Integration
 
 - This project is integrated with SonarCloud to continuously analyze code quality.
-- Check the SonarCloud dashboard for detailed reports and suggestions for improvement.
-```
-
----
-
-### Summary
-
-This Node.js project **TaskFlow** includes intentional code quality issues across various files that SonarCloud will detect. These issues will help you test the effectiveness of your AI tool for code analysis and resolution.
+- You can check the SonarCloud dashboard for detailed reports and suggestions for improvement.
 
 
+## Deployment
+
+The code relating to the CI/CD pipeline should be referred for deployment steps.
